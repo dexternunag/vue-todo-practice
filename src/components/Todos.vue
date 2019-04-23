@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li v-for="(todo, index) in todos" :key="index">
-                <TodoItem :todo="todo" />
+                <TodoItem :todo="todo" v-on:del-todo="$emit('del-todo', todo.id)" />
             </li>
         </ul>
     </div>
